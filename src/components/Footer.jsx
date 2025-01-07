@@ -6,10 +6,10 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-between">
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
-            <h2 className="text-2xl font-bold text-white mb-3">Your Logo</h2>
+            <h2 className="text-2xl font-bold text-white mb-3">Sha-Shank</h2>
             <p className="text-gray-400">
-              Your company tagline or a short description goes here. Delivering
-              quality and excellence since [Year].
+              Your Trusted Source for Quality Products! Delivering quality and
+              excellence since 2020.
             </p>
           </div>
 
@@ -74,8 +74,7 @@ const Footer = () => {
 
         <div className="mt-8 text-center text-gray-500">
           <p>
-            &copy; {new Date().getFullYear()} Your Company Name. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} Sha-Shank. All rights reserved.
           </p>
         </div>
       </div>
