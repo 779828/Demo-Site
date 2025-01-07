@@ -1,13 +1,13 @@
 const About = () => {
   return (
-    <div className="h-[110vh]">
+    <div className="">
       <section className="dark:bg-gray-800 py-16 px-5">
         <div className="container mx-auto flex flex-col items-center md:flex-row">
-          <div className="mb-8 md:mb-0 md:w-1/2">
+          <div className="mb-8 md:mb-0 md:w-1/2 object-cover">
             <img
               src="https://img.stablecog.com/insecure/1920w/aHR0cHM6Ly9iLnN0YWJsZWNvZy5jb20vZGYzMTNkM2QtZTA2MS00ZjcwLWEyMjgtNTU1OGFhODY4OTczLmpwZWc.webp"
               alt="About Us"
-              className="rounded-lg shadow-lg"
+              className="w-3/4 rounded-lg shadow-lg"
             />
           </div>
 
