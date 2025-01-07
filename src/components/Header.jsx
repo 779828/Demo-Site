@@ -52,7 +52,9 @@ const Header = () => {
       }`}
     >
       <div className="text-xl font-bold text-gray-800 dark:text-gray-100">
-        Sha-Shank
+        <a href="#" className="cursor-pointer">
+          Sha-Shank
+        </a>
       </div>
       <ul className="flex items-center space-x-6">
         <li>
