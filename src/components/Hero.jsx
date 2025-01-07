@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div className="flex items-center flex-col h-[42em] dark:bg-gray-800">
+    <div className="flex items-center flex-col h-[30em] dark:bg-gray-800">
       <div className="mt-20 px-12 py-4">
         <h1 className="py-6 text-5xl font-bold text-gray-600 flex justify-center text-center dark:text-gray-400">
           Explore the Possibilities <br /> of AI Chatting with Brainwave
