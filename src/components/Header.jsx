@@ -2,27 +2,24 @@ import React, { useState, useEffect } from "react";
 
 const Header = () => {
   const [darkMode, setDarkMode] = useState(false);
-  const [isVisible, setIsVisible] = useState(true); // Navbar visibility
-  const [lastScrollY, setLastScrollY] = useState(0); // Last scroll position
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > lastScrollY) {
-        // Scrolling Down
         setIsVisible(false);
       } else {
-        // Scrolling Up
         setIsVisible(true);
       }
 
-      setLastScrollY(currentScrollY); // Update last scroll position
+      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
