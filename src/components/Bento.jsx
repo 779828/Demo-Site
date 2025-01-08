@@ -1,68 +1,111 @@
-const Bento = () => {
-  const blocks = [
-    {
-      title: "Large Block",
-      description: "This block spans 8 columns on large screens.",
-      //   bgColor: "bg-blue-500",
-      img: "https://via.placeholder.com/600x300",
-      span: "lg:col-span-8",
-    },
-    {
-      title: "Medium Block",
-      description: "This block spans 4 columns on large screens.",
-      //   bgColor: "bg-green-500",
-      img: "https://via.placeholder.com/400x300",
-      span: "lg:col-span-4",
-    },
-    {
-      title: "Small Block 1",
-      description: "This block spans 4 columns on medium screens.",
-      //   bgColor: "bg-red-500",
-      img: "https://via.placeholder.com/300x300",
-      span: "md:col-span-4",
-    },
-    {
-      title: "Small Block 2",
-      description: "This block spans 4 columns on medium screens.",
-      //   bgColor: "bg-yellow-500",
-      img: "https://via.placeholder.com/300x300",
-      span: "md:col-span-4",
-    },
-    {
-      title: "Small Block 3",
-      description: "This block spans 4 columns on medium screens.",
-      //   bgColor: "bg-purple-500",
-      img: "https://via.placeholder.com/300x300",
-      span: "md:col-span-4",
-    },
-  ];
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
+const Bento = () => {
   return (
-    <div className="bg-inherit min-h-screen py-10 px-5">
+    <div className="bg-inherit min-h-screen py-10 px-5 relative">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center dark:text-gray-400 mb-10">
-          Products
-        </h2>
+        <div className="text-center mb-20">
+          <h2 className="text-3xl font-bold dark:text-gray-400 mb-4">
+            Our Amazing Products
+          </h2>
+          <p className="text-lg text-gray-700 dark:text-gray-300">
+            Discover the power of our product line designed to enhance
+            productivity and innovation.
+          </p>
+        </div>
 
         <div className="grid grid-cols-12 gap-6">
-          {blocks.map((block, index) => (
-            <div
-              key={index}
-              className={`col-span-12 sm:col-span-6 ${block.span} rounded-lg shadow-lg overflow-hidden`}
-            >
-              <img
-                src={block.img}
-                alt={block.title}
-                className="w-full h-48 object-cover"
-              />
-              <div
-                className={`p-6 ${block.bgColor} text-white flex flex-col justify-between`}
-              >
-                <h3 className="text-xl font-bold mb-2">{block.title}</h3>
-                <p>{block.description}</p>
-              </div>
+          <div className="col-span-12 sm:col-span-6 md:col-span-4 rounded-lg shadow-lg overflow-hidden relative">
+            <img
+              src="https://sru.edu.in/assets/schools/cse/ai-ml-banner.png"
+              alt="Product 1"
+              className="w-full h-48 object-cover"
+            />
+            <div className="absolute bottom-4 left-4 text-white">
+              <i className="fas fa-cogs text-xl"></i>
             </div>
-          ))}
+            <div className="absolute bottom-4 right-4">
+              <button className="bg-gray-300 border-gray-800 text-gray-800 transition duration-300 rounded-xl px-4 py-2 hover:bg-gray-800 hover:text-white dark:bg-transparent dark:text-gray-300 dark:hover:bg-gray-300 dark:hover:text-black">
+                Explore More
+              </button>
+            </div>
+          </div>
+
+          <div className="col-span-12 sm:col-span-6 md:col-span-4 rounded-lg shadow-lg overflow-hidden relative">
+            <img
+              src="https://media.istockphoto.com/id/1473211827/photo/concept-of-ai-and-computer-technology.jpg?s=612x612&w=0&k=20&c=EPuzqCx7R3_wA2fOj3YFgjNs0tjDee7FZDkXLO9S4Ro="
+              alt="Product 2"
+              className="w-full h-48 object-cover"
+            />
+            <div className="absolute bottom-4 left-4 text-white">
+              <i className="fas fa-cogs text-xl"></i>
+            </div>
+            <div className="absolute bottom-4 right-4">
+              <button className="bg-gray-300 border-gray-800 text-gray-800 transition duration-300 rounded-xl px-4 py-2 hover:bg-gray-800 hover:text-white dark:bg-transparent dark:text-gray-300 dark:hover:bg-gray-300 dark:hover:text-black">
+                Explore More
+              </button>
+            </div>
+          </div>
+          <div className="col-span-12 sm:col-span-6 md:col-span-4 rounded-lg shadow-lg overflow-hidden relative">
+            <img
+              src="https://miro.medium.com/v2/resize:fit:1400/1*0Pe2QKywp07z4lPCcb1Q2Q@2x.jpeg"
+              alt="Product 2"
+              className="w-full h-48 object-cover"
+            />
+            <div className="absolute bottom-4 left-4 text-white">
+              <i className="fas fa-cogs text-xl"></i>
+            </div>
+            <div className="absolute bottom-4 right-4">
+              <button className="bg-gray-300 border-gray-800 text-gray-800 transition duration-300 rounded-xl px-4 py-2 hover:bg-gray-800 hover:text-white dark:bg-transparent dark:text-gray-300 dark:hover:bg-gray-300 dark:hover:text-black">
+                Explore More
+              </button>
+            </div>
+          </div>
+          <div className="col-span-12 sm:col-span-6 md:col-span-4 rounded-lg shadow-lg overflow-hidden relative">
+            <img
+              src="https://miro.medium.com/v2/resize:fit:1400/1*er5uoPoOmLkfuxjTAy2zwQ.jpeg"
+              alt="Product 2"
+              className="w-full h-48 object-cover"
+            />
+            <div className="absolute bottom-4 left-4 text-white">
+              <i className="fas fa-cogs text-xl"></i>
+            </div>
+            <div className="absolute bottom-4 right-4">
+              <button className="bg-gray-300 border-gray-800 text-gray-800 transition duration-300 rounded-xl px-4 py-2 hover:bg-gray-800 hover:text-white dark:bg-transparent dark:text-gray-300 dark:hover:bg-gray-300 dark:hover:text-black">
+                Explore More
+              </button>
+            </div>
+          </div>
+          <div className="col-span-12 sm:col-span-6 md:col-span-4 rounded-lg shadow-lg overflow-hidden relative">
+            <img
+              src="https://bsmedia.business-standard.com/_media/bs/img/article/2021-01/14/full/1610640588-3918.jpg?im=FeatureCrop,size=(826,465)"
+              alt="Product 2"
+              className="w-full h-48 object-cover"
+            />
+            <div className="absolute bottom-4 left-4 text-white">
+              <i className="fas fa-cogs text-xl"></i>
+            </div>
+            <div className="absolute bottom-4 right-4">
+              <button className="bg-gray-300 border-gray-800 text-gray-800 transition duration-300 rounded-xl px-4 py-2 hover:bg-gray-800 hover:text-white dark:bg-transparent dark:text-gray-300 dark:hover:bg-gray-300 dark:hover:text-black">
+                Explore More
+              </button>
+            </div>
+          </div>
+          <div className="col-span-12 sm:col-span-6 md:col-span-4 rounded-lg shadow-lg overflow-hidden relative">
+            <img
+              src="https://karnavatiuniversity.edu.in/wp-content/uploads/2024/02/cse-with-specialization-in-ai-ml-mobile-banner-img.jpg"
+              alt="Product 2"
+              className="w-full h-48 object-cover"
+            />
+            <div className="absolute bottom-4 left-4 text-white">
+              <i className="fas fa-cogs text-xl"></i>
+            </div>
+            <div className="absolute bottom-4 right-4">
+              <button className="bg-gray-300 border-gray-800 text-gray-800 transition duration-300 rounded-xl px-4 py-2 hover:bg-gray-800 hover:text-white dark:bg-transparent dark:text-gray-300 dark:hover:bg-gray-300 dark:hover:text-black">
+                Explore More
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
