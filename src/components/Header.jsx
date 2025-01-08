@@ -47,7 +47,7 @@ const Header = () => {
   return (
     <nav
       id="navbar"
-      className={`fixed top-0 left-0 w-full text-white transition-transform duration-300 flex items-center justify-between p-4 bg-inherit dark:bg-gray-800 ${
+      className={`z-999 fixed top-0 left-0 w-full text-white transition-transform duration-300 flex items-center justify-between p-4 bg-inherit dark:bg-gray-800 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
