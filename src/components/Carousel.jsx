@@ -37,7 +37,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="w-full my-20 py-10 px-8 bg-inherit overflow-hidden relative">
+    <div className="w-full my-10 py-6 px-4 bg-inherit overflow-hidden relative">
       <div
         ref={containerRef}
         className="flex"
@@ -46,7 +46,7 @@ const Carousel = () => {
             currentIndex * 100
           }% + ${translateX}px))`,
           transition: isDragging ? "none" : "transform 0.3s ease-in-out",
-          style: isDragging ? "grabbing" : "grab",
+          cursor: isDragging ? "grabbing" : "grab",
         }}
         onMouseDown={handleStartDrag}
         onMouseMove={handleDragging}
@@ -59,24 +59,24 @@ const Carousel = () => {
         {images.map((img, index) => (
           <div
             key={index}
-            className="w-full flex-shrink-0 h-[50vh] flex justify-center items-center cursor-pointer"
+            className="w-full flex-shrink-0 flex justify-center items-center cursor-pointer"
           >
             <img
               src={img}
               alt={`Slide ${index + 1}`}
-              className="w-2/4 h-full object-contained rounded-lg shadow-md"
+              className="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 h-[30vh] sm:h-[40vh] md:h-[50vh] object-cover rounded-lg shadow-md"
             />
           </div>
         ))}
       </div>
       <button
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 text-white p-2 rounded-full shadow-md"
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 text-black bg-white p-2 rounded-full shadow-md text-sm sm:text-lg hover:bg-gray-200"
         onClick={() => currentIndex > 0 && setCurrentIndex(currentIndex - 1)}
       >
         &lt;
       </button>
       <button
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 text-white p-2 rounded-full shadow-md"
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 text-black bg-white p-2 rounded-full shadow-md text-sm sm:text-lg hover:bg-gray-200"
         onClick={() =>
           currentIndex < images.length - 1 && setCurrentIndex(currentIndex + 1)
         }
