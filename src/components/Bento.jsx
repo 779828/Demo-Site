@@ -1,6 +1,6 @@
 const Bento = () => {
   return (
-    <div className="bg-inherit min-h-screen py-10 px-5">
+    <div className="bg-inherit py-10 px-5">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-center dark:text-gray-400 mb-10">
           Products

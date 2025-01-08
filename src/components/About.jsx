@@ -28,7 +28,7 @@ const About = () => {
             </p>
             <a
               href="#"
-              className="inline-block px-6 py-3 bg-gray-800 text-white rounded-xl hover:bg-gray-700 transition duration-300 dark:bg-gray-300 dark:text-black dark:hover:bg-gray-100"
+              className="inline-block px-6 py-3 bg-gray-800 text-white rounded-xl hover:bg-gray-700 transition duration-300 dark:bg-gray-300 dark:text-black dark:hover:bg-gray-100 uppercase"
             >
               Learn More
             </a>
