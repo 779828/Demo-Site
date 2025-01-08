@@ -70,13 +70,13 @@ const Carousel = () => {
         ))}
       </div>
       <button
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black text-white p-2 rounded-full shadow-md hover:bg-gray-800"
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 text-white p-2 rounded-full shadow-md"
         onClick={() => currentIndex > 0 && setCurrentIndex(currentIndex - 1)}
       >
         &lt;
       </button>
       <button
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black text-white p-2 rounded-full shadow-md hover:bg-gray-800"
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 text-white p-2 rounded-full shadow-md"
         onClick={() =>
           currentIndex < images.length - 1 && setCurrentIndex(currentIndex + 1)
         }
