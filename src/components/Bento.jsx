@@ -49,7 +49,7 @@ const Bento = () => {
           <div className="col-span-12 sm:col-span-6 md:col-span-4 rounded-lg shadow-lg overflow-hidden relative">
             <img
               src="https://miro.medium.com/v2/resize:fit:1400/1*0Pe2QKywp07z4lPCcb1Q2Q@2x.jpeg"
-              alt="Product 2"
+              alt="Product 3"
               className="w-full h-48 object-cover"
             />
             <div className="absolute bottom-4 left-4 text-white">
@@ -64,7 +64,7 @@ const Bento = () => {
           <div className="col-span-12 sm:col-span-6 md:col-span-4 rounded-lg shadow-lg overflow-hidden relative">
             <img
               src="https://miro.medium.com/v2/resize:fit:1400/1*er5uoPoOmLkfuxjTAy2zwQ.jpeg"
-              alt="Product 2"
+              alt="Product 4"
               className="w-full h-48 object-cover"
             />
             <div className="absolute bottom-4 left-4 text-white">
@@ -79,7 +79,7 @@ const Bento = () => {
           <div className="col-span-12 sm:col-span-6 md:col-span-4 rounded-lg shadow-lg overflow-hidden relative">
             <img
               src="https://bsmedia.business-standard.com/_media/bs/img/article/2021-01/14/full/1610640588-3918.jpg?im=FeatureCrop,size=(826,465)"
-              alt="Product 2"
+              alt="Product 5"
               className="w-full h-48 object-cover"
             />
             <div className="absolute bottom-4 left-4 text-white">
@@ -94,7 +94,7 @@ const Bento = () => {
           <div className="col-span-12 sm:col-span-6 md:col-span-4 rounded-lg shadow-lg overflow-hidden relative">
             <img
               src="https://karnavatiuniversity.edu.in/wp-content/uploads/2024/02/cse-with-specialization-in-ai-ml-mobile-banner-img.jpg"
-              alt="Product 2"
+              alt="Product 6"
               className="w-full h-48 object-cover"
             />
             <div className="absolute bottom-4 left-4 text-white">
