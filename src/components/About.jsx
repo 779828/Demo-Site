@@ -1,17 +1,17 @@
 const About = () => {
   return (
-    <div className="">
-      <section className="dark:bg-gray-800 py-16 px-5">
-        <div className="container mx-auto flex flex-col items-center md:flex-row">
-          <div className="mb-8 md:mb-0 md:w-1/2 object-cover">
+    <div className="mt-32 px-6 py-12">
+      <section className="dark:bg-gray-800 bg-inherit py-12">
+        <div className="container mx-auto flex flex-col items-center md:flex-row md:items-start">
+          <div className="mb-8 md:mb-0 md:w-1/2 flex justify-center">
             <img
               src="https://img.stablecog.com/insecure/1920w/aHR0cHM6Ly9iLnN0YWJsZWNvZy5jb20vZGYzMTNkM2QtZTA2MS00ZjcwLWEyMjgtNTU1OGFhODY4OTczLmpwZWc.webp"
               alt="About Us"
-              className="w-3/4 rounded-lg shadow-lg"
+              className="w-full max-w-sm rounded-lg shadow-lg object-cover md:w-3/4"
             />
           </div>
 
-          <div className="md:w-1/2 md:pl-10">
+          <div className="md:w-1/2 md:pl-10 text-center md:text-left">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               About Us
             </h2>
@@ -28,7 +28,7 @@ const About = () => {
             </p>
             <a
               href="#"
-              className="p-2 bg-gray-800 text-white rounded-xl hover:bg-gray-700 transition duration-300 dark:bg-gray-300 dark:text-black dark:hover:bg-gray-100"
+              className="inline-block px-6 py-3 bg-gray-800 text-white rounded-xl hover:bg-gray-700 transition duration-300 dark:bg-gray-300 dark:text-black dark:hover:bg-gray-100"
             >
               Learn More
             </a>
