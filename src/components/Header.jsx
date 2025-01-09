@@ -51,7 +51,7 @@ const Header = () => {
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="text-xl font-bold text-gray-800 dark:text-gray-100">
+      <div className="text-xl font-bold dark:bg-gradient-to-r dark:from-purple-400 dark:via-pink-500 dark:to-red-500 dark:bg-clip-text dark:text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
         <a href="#" className="cursor-pointer">
           Sha-Shank
         </a>
