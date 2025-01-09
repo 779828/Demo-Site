@@ -14,8 +14,8 @@ const Bento = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-12 gap-6">
-          <div className="col-span-12 sm:col-span-6 md:col-span-4 rounded-lg shadow-lg overflow-hidden relative group">
+        <div className="grid sm:grid-cols-12 grid-cols-2 gap-6">
+          <div className="col-span-1 sm:col-span-6 md:col-span-4 rounded-lg shadow-lg overflow-hidden relative group">
             <img
               src="https://sru.edu.in/assets/schools/cse/ai-ml-banner.png"
               alt="Product 1"
@@ -31,7 +31,7 @@ const Bento = () => {
             </div>
           </div>
 
-          <div className="col-span-12 sm:col-span-6 md:col-span-4 rounded-lg shadow-lg overflow-hidden relative group">
+          <div className="col-span-1 sm:col-span-6 md:col-span-4 rounded-lg shadow-lg overflow-hidden relative group">
             <img
               src="https://media.istockphoto.com/id/1473211827/photo/concept-of-ai-and-computer-technology.jpg?s=612x612&w=0&k=20&c=EPuzqCx7R3_wA2fOj3YFgjNs0tjDee7FZDkXLO9S4Ro="
               alt="Product 2"
@@ -47,7 +47,7 @@ const Bento = () => {
             </div>
           </div>
 
-          <div className="col-span-12 sm:col-span-6 md:col-span-4 rounded-lg shadow-lg overflow-hidden relative group">
+          <div className="col-span-1 sm:col-span-6 md:col-span-4 rounded-lg shadow-lg overflow-hidden relative group">
             <img
               src="https://miro.medium.com/v2/resize:fit:1400/1*0Pe2QKywp07z4lPCcb1Q2Q@2x.jpeg"
               alt="Product 3"
@@ -63,7 +63,7 @@ const Bento = () => {
             </div>
           </div>
 
-          <div className="col-span-12 sm:col-span-6 md:col-span-4 rounded-lg shadow-lg overflow-hidden relative group">
+          <div className="col-span-1 sm:col-span-6 md:col-span-4 rounded-lg shadow-lg overflow-hidden relative group">
             <img
               src="https://miro.medium.com/v2/resize:fit:1400/1*er5uoPoOmLkfuxjTAy2zwQ.jpeg"
               alt="Product 4"
@@ -78,7 +78,8 @@ const Bento = () => {
               </button>
             </div>
           </div>
-          <div className="col-span-12 sm:col-span-6 md:col-span-4 rounded-lg shadow-lg overflow-hidden relative group">
+
+          <div className="col-span-1 sm:col-span-6 md:col-span-4 rounded-lg shadow-lg overflow-hidden relative group">
             <img
               src="https://bsmedia.business-standard.com/_media/bs/img/article/2021-01/14/full/1610640588-3918.jpg?im=FeatureCrop,size=(826,465)"
               alt="Product 5"
@@ -94,7 +95,7 @@ const Bento = () => {
             </div>
           </div>
 
-          <div className="col-span-12 sm:col-span-6 md:col-span-4 rounded-lg shadow-lg overflow-hidden relative group">
+          <div className="col-span-1 sm:col-span-6 md:col-span-4 rounded-lg shadow-lg overflow-hidden relative group">
             <img
               src="https://karnavatiuniversity.edu.in/wp-content/uploads/2024/02/cse-with-specialization-in-ai-ml-mobile-banner-img.jpg"
               alt="Product 6"
