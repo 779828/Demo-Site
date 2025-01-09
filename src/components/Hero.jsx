@@ -19,12 +19,12 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      <div className="mt-10 flex flex-wrap justify-center items-center space-x-6">
-        <div className="w-full py-4 px-8 md:w-52 text-center">
+      <div className="mt-10 flex flex-wrap justify-center items-center">
+        <div className="w-full p-4 md:w-52 text-center">
           <img
             src="https://www.guava.blue/wp-content/uploads/2021/09/iStock-1307309168-1170x658.jpg"
             alt="AI powered"
-            className="w-full h-auto rounded-lg shadow-lg"
+            className="w-full h-auto rounded-lg shadow-lg object-cover"
           />
           <p className="text-sm md:text-base mt-2 text-gray-600 dark:text-gray-400">
             AI-powered solutions
@@ -34,7 +34,7 @@ const Hero = () => {
           <img
             src="https://media.licdn.com/dms/image/C5112AQF_gWyWqQC8OQ/article-cover_image-shrink_720_1280/0/1572754452905?e=2147483647&v=beta&t=_OpNlNf-AVwqlM6ITWY3CMUX8iVckqAvQ1dTcWoEqiY"
             alt="Productivity booster"
-            className="w-full h-auto rounded-lg shadow-lg"
+            className="w-full h-auto rounded-lg shadow-lg object-cover"
           />
           <p className="text-sm md:text-base mt-2 text-gray-600 dark:text-gray-400">
             Productivity boosters
@@ -44,7 +44,7 @@ const Hero = () => {
           <img
             src="https://blog.lifeqisystem.com/hubfs/Security%20Reliability%20Flexibility%20-%2001.png"
             alt="Secure and reliable"
-            className="w-full h-auto rounded-lg shadow-lg"
+            className="w-full h-auto rounded-lg shadow-lg object-cover"
           />
           <p className="text-sm md:text-base mt-2 text-gray-600 dark:text-gray-400">
             Secure & reliable
