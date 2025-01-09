@@ -25,7 +25,7 @@ const Bento = () => {
               <i className="fas fa-cogs text-xl"></i>
             </div>
             <div className="absolute bottom-4 right-4">
-              <button className="bg-gray-300 border-gray-800 text-gray-800 transition duration-300 rounded-xl px-4 py-2 group-hover:bg-gray-800 group-hover:text-white dark:bg-transparent dark:text-gray-300 dark:group-hover:bg-gray-300 dark:group-hover:text-black">
+              <button className="bg-transparent transition duration-300 rounded-xl px-4 py-2 group-hover:bg-gray-800 text-white dark:bg-transparent dark:text-gray-300 dark:group-hover:bg-gray-300 dark:group-hover:text-black">
                 Explore More
               </button>
             </div>
@@ -41,7 +41,7 @@ const Bento = () => {
               <i className="fas fa-cogs text-xl"></i>
             </div>
             <div className="absolute bottom-4 right-4">
-              <button className="bg-gray-300 border-gray-800 text-gray-800 transition duration-300 rounded-xl px-4 py-2 group-hover:bg-gray-800 group-hover:text-white dark:bg-transparent dark:text-gray-300 dark:group-hover:bg-gray-300 dark:group-hover:text-black">
+              <button className="bg-transparent transition duration-300 rounded-xl px-4 py-2 group-hover:bg-gray-800 text-white dark:bg-transparent dark:text-gray-300 dark:group-hover:bg-gray-300 dark:group-hover:text-black">
                 Explore More
               </button>
             </div>
@@ -57,7 +57,7 @@ const Bento = () => {
               <i className="fas fa-cogs text-xl"></i>
             </div>
             <div className="absolute bottom-4 right-4">
-              <button className="bg-gray-300 border-gray-800 text-gray-800 transition duration-300 rounded-xl px-4 py-2 group-hover:bg-gray-800 group-hover:text-white dark:bg-transparent dark:text-gray-300 dark:group-hover:bg-gray-300 dark:group-hover:text-black">
+              <button className="bg-transparent transition duration-300 rounded-xl px-4 py-2 group-hover:bg-gray-800 text-white dark:bg-transparent dark:text-gray-300 dark:group-hover:bg-gray-300 dark:group-hover:text-black">
                 Explore More
               </button>
             </div>
@@ -73,7 +73,7 @@ const Bento = () => {
               <i className="fas fa-cogs text-xl"></i>
             </div>
             <div className="absolute bottom-4 right-4">
-              <button className="bg-gray-300 border-gray-800 text-gray-800 transition duration-300 rounded-xl px-4 py-2 group-hover:bg-gray-800 group-hover:text-white dark:bg-transparent dark:text-gray-300 dark:group-hover:bg-gray-300 dark:group-hover:text-black">
+              <button className="bg-transparent transition duration-300 rounded-xl px-4 py-2 group-hover:bg-gray-800 text-white dark:bg-transparent dark:text-gray-300 dark:group-hover:bg-gray-300 dark:group-hover:text-black">
                 Explore More
               </button>
             </div>
@@ -89,7 +89,7 @@ const Bento = () => {
               <i className="fas fa-cogs text-xl"></i>
             </div>
             <div className="absolute bottom-4 right-4">
-              <button className="bg-gray-300 border-gray-800 text-gray-800 transition duration-300 rounded-xl px-4 py-2 group-hover:bg-gray-800 group-hover:text-white dark:bg-transparent dark:text-gray-300 dark:group-hover:bg-gray-300 dark:group-hover:text-black">
+              <button className="bg-transparent transition duration-300 rounded-xl px-4 py-2 group-hover:bg-gray-800 text-white dark:bg-transparent dark:text-gray-300 dark:group-hover:bg-gray-300 dark:group-hover:text-black">
                 Explore More
               </button>
             </div>
@@ -105,7 +105,7 @@ const Bento = () => {
               <i className="fas fa-cogs text-xl"></i>
             </div>
             <div className="absolute bottom-4 right-4">
-              <button className="bg-gray-300 border-gray-800 text-gray-800 transition duration-300 rounded-xl px-4 py-2 group-hover:bg-gray-800 group-hover:text-white dark:bg-transparent dark:text-gray-300 dark:group-hover:bg-gray-300 dark:group-hover:text-black">
+              <button className="bg-transparent transition duration-300 rounded-xl px-4 py-2 group-hover:bg-gray-800 text-white dark:bg-transparent dark:text-gray-300 dark:group-hover:bg-gray-300 dark:group-hover:text-black">
                 Explore More
               </button>
             </div>
