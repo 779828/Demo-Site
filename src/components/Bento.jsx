@@ -2,7 +2,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Bento = () => {
   return (
-    <div className="bg-inherit mt-40 py-10 px-5 relative">
+    <div className="bg-inherit mt-10 md:mt-40 py-10 px-5 relative">
       <div className="container mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-3xl font-bold dark:text-gray-400 mb-4">

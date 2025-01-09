@@ -20,7 +20,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="mt-10 flex flex-wrap justify-center items-center space-x-6">
-        <div className="w-40 md:w-52 text-center">
+        <div className="w-full py-4 px-8 md:w-52 text-center">
           <img
             src="https://www.guava.blue/wp-content/uploads/2021/09/iStock-1307309168-1170x658.jpg"
             alt="AI powered"
@@ -30,9 +30,9 @@ const Hero = () => {
             AI-powered solutions
           </p>
         </div>
-        <div className="w-40 md:w-52 text-center">
+        <div className="w-full p-4 md:w-52 text-center">
           <img
-            src="https://www.ismartrecruit.com/upload/blog/main_image/The_Ultimate_Productivity_Booster_for_Recruiters.webp"
+            src="https://media.licdn.com/dms/image/C5112AQF_gWyWqQC8OQ/article-cover_image-shrink_720_1280/0/1572754452905?e=2147483647&v=beta&t=_OpNlNf-AVwqlM6ITWY3CMUX8iVckqAvQ1dTcWoEqiY"
             alt="Productivity booster"
             className="w-full h-auto rounded-lg shadow-lg"
           />
@@ -40,7 +40,7 @@ const Hero = () => {
             Productivity boosters
           </p>
         </div>
-        <div className="w-40 md:w-52 text-center">
+        <div className="w-full p-4 md:w-52 text-center">
           <img
             src="https://blog.lifeqisystem.com/hubfs/Security%20Reliability%20Flexibility%20-%2001.png"
             alt="Secure and reliable"

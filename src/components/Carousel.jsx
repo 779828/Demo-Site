@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -36,6 +36,23 @@ const Carousel = () => {
     setTranslateX(0);
   };
 
+  useEffect(() => {
+    const handleWindowMouseUp = () => {
+      if (isDragging) {
+        setIsDragging(false);
+        setTranslateX(0);
+      }
+    };
+
+    window.addEventListener("mouseup", handleWindowMouseUp);
+    window.addEventListener("touchend", handleWindowMouseUp);
+
+    return () => {
+      window.removeEventListener("mouseup", handleWindowMouseUp);
+      window.removeEventListener("touchend", handleWindowMouseUp);
+    };
+  }, [isDragging]);
+
   return (
     <div className="w-full my-20 py-10 px-8 bg-inherit overflow-hidden relative">
       <div
@@ -46,7 +63,7 @@ const Carousel = () => {
             currentIndex * 100
           }% + ${translateX}px))`,
           transition: isDragging ? "none" : "transform 0.3s ease-in-out",
-          style: isDragging ? "grabbing" : "grab",
+          cursor: isDragging ? "grabbing" : "grab",
         }}
         onMouseDown={handleStartDrag}
         onMouseMove={handleDragging}
