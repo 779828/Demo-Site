@@ -1,8 +1,6 @@
-import React from "react";
-
 const Home = () => {
   return (
-    <section className="bg-gray-300 dark:bg-gray-800 py-16 h-screen">
+    <section className="bg-gray-300 dark:bg-gray-800 py-16">
       <div className="container mx-auto flex flex-col-reverse lg:flex-col items-center px-6 lg:px-12">
         <div className="w-full lg:w-1/2 text-center lg:text-left">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-gray-300 leading-tight mb-6 mt-12">
@@ -16,7 +14,7 @@ const Home = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
             <a
-              href="#services"
+              href="/main"
               className="px-6 py-3 bg-gray-800 text-white font-semibold rounded-lg shadow-md hover:bg-gray-600 transition dark:bg-gray-300 dark:text-gray-800 dark:hover:bg-gray-100"
             >
               Get Started
