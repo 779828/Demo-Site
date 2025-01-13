@@ -47,19 +47,19 @@ const Header = () => {
   return (
     <nav
       id="navbar"
-      className={`z-999 fixed top-0 left-0 w-full text-white transition-transform duration-300 flex items-center justify-between p-4 bg-inherit dark:bg-gray-800 ${
+      className={`z-10 fixed top-0 left-0 w-full text-white transition-transform duration-300 flex items-center justify-between p-4 bg-inherit dark:bg-gray-800 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <div className="text-xl font-bold dark:bg-gradient-to-r dark:from-purple-400 dark:via-pink-500 dark:to-red-500 dark:bg-clip-text dark:text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
-        <a href="#" className="cursor-pointer">
+        <a href="/" className="cursor-pointer">
           Sha-Shank
         </a>
       </div>
       <ul className="flex items-center space-x-6">
         <li>
           <a
-            href="#"
+            href="/home"
             className="text-gray-800 dark:text-gray-100 hover:underline hidden md:block"
           >
             Home
@@ -67,7 +67,7 @@ const Header = () => {
         </li>
         <li>
           <a
-            href="#"
+            href="/about"
             className="text-gray-800 dark:text-gray-100 hover:underline hidden md:block"
           >
             About
@@ -75,7 +75,7 @@ const Header = () => {
         </li>
         <li>
           <a
-            href="#"
+            href="/contact"
             className="text-gray-800 dark:text-gray-100 hover:underline hidden md:block"
           >
             Contact

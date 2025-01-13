@@ -1,21 +1,26 @@
 import React from "react";
-import About from "./components/About";
-import Bento from "./components/Bento";
-import Carousel from "./components/Carousel";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import Main from "./components/Main";
+import About from "./components/About";
+import Contact from "./components/Contact";
 
 function App() {
   return (
     <>
       <div className="bg-gray-300 dark:bg-gray-800 scrollbar-none overflow-y-scroll">
-        <Header />
-        <Hero />
-        <Bento />
-        <About />
-        <Carousel />
-        <Footer />
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
       </div>
     </>
   );

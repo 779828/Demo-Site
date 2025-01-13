@@ -3,7 +3,6 @@ const Footer = () => {
     <footer className="bg-gray-900 text-gray-300 py-10">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-between gap-y-8">
-          {/* Brand Info Section */}
           <div className="w-full md:w-1/3">
             <h2 className="text-2xl font-bold text-white mb-3">Sha-Shank</h2>
             <p className="text-gray-400">
@@ -12,26 +11,38 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Quick Links Section */}
           <div className="w-full md:w-1/3">
             <h3 className="text-lg font-semibold text-white mb-3">
               Quick Links
             </h3>
             <ul className="space-y-2">
-              {["Home", "About Us", "Services", "Contact"].map((link) => (
-                <li key={link}>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-white transition"
-                  >
-                    {link}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a
+                  href="/home"
+                  className="text-gray-400 hover:text-white transition"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/about"
+                  className="text-gray-400 hover:text-white transition"
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/contact"
+                  className="text-gray-400 hover:text-white transition"
+                >
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
 
-          {/* Social Media Section */}
           <div className="w-full md:w-1/3">
             <h3 className="text-lg font-semibold text-white mb-3">Follow Us</h3>
             <div className="flex space-x-4 flex-wrap">
