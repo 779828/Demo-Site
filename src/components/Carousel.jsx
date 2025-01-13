@@ -86,7 +86,7 @@ const Carousel = () => {
           </div>
         ))}
       </div>
-      {/* <button
+      <button
         className="absolute top-1/2 left-4 transform -translate-y-1/2 text-white p-2 rounded-full shadow-md"
         onClick={() => currentIndex > 0 && setCurrentIndex(currentIndex - 1)}
       >
@@ -99,7 +99,7 @@ const Carousel = () => {
         }
       >
         &gt;
-      </button> */}
+      </button>
     </div>
   );
 };
