@@ -8,9 +8,11 @@ const Home = () => {
             <span className="text-blue-900 dark:text-gray-100">My Project</span>
           </h1>
           <p className="text-gray-700 text-lg mb-6 dark:text-gray-300">
-            Your project tagline or mission statement goes here. Showcase your
-            purpose, services, or offerings in a way that grabs attention and
-            drives engagement.
+            Step into the future of intelligent conversations with Brainwave,
+            your ultimate AI companion designed to redefine how you interact
+            with technology. Whether you're seeking quick answers, meaningful
+            insights, or creative ideas, Brainwave is here to make your
+            experience seamless and engaging.
           </p>
           <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
             <a
