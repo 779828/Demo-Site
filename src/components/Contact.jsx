@@ -1,6 +1,9 @@
 import { useRef } from "react";
+import { useDispatch } from "react-redux";
+import { addSubmission } from "../features/formData/dataSlice";
 
 const Contact = () => {
+  const dispatch = useDispatch();
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const messageRef = useRef(null);
@@ -10,6 +13,8 @@ const Contact = () => {
     const name = nameRef.current.value;
     const email = emailRef.current.value;
     const message = messageRef.current.value;
+
+    dispatch(addSubmission({ name, email, message }));
 
     console.log("Form Data:", { name, email, message });
 
