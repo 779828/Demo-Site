@@ -57,7 +57,7 @@ const Carousel = () => {
     <div className="w-full my-20 py-10 px-8 bg-inherit overflow-hidden relative">
       <div
         ref={containerRef}
-        className="flex"
+        className="flex lg:mx-[30%]"
         style={{
           transform: `translateX(calc(-${
             currentIndex * 100
