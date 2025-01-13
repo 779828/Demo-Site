@@ -76,17 +76,17 @@ const Carousel = () => {
         {images.map((img, index) => (
           <div
             key={index}
-            className="w-full flex-shrink-0 h-[50vh] flex justify-center items-center cursor-pointer"
+            className="w-full flex-shrink-0 h-[50vh] flex justify-center items-center cursor-pointer object-cover"
           >
             <img
               src={img}
               alt={`Slide ${index + 1}`}
-              className="w-3/4 h-full object-cover rounded-lg shadow-md"
+              className="w-3/4 h-full rounded-lg shadow-md"
             />
           </div>
         ))}
       </div>
-      {/* <button
+      <button
         className="absolute top-1/2 left-4 transform -translate-y-1/2 text-white p-2 rounded-full shadow-md"
         onClick={() => currentIndex > 0 && setCurrentIndex(currentIndex - 1)}
       >
@@ -99,7 +99,7 @@ const Carousel = () => {
         }
       >
         &gt;
-      </button> */}
+      </button>
     </div>
   );
 };
