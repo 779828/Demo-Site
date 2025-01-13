@@ -1,4 +1,23 @@
+import { useRef } from "react";
+
 const Contact = () => {
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+  const messageRef = useRef(null);
+
+  const submitForm = (e) => {
+    e.preventDefault();
+    const name = nameRef.current.value;
+    const email = emailRef.current.value;
+    const message = messageRef.current.value;
+
+    console.log("Form Data:", { name, email, message });
+
+    nameRef.current.value = "";
+    emailRef.current.value = "";
+    messageRef.current.value = "";
+  };
+
   return (
     <section className="bg-gray-300 py-12 dark:bg-gray-800">
       <div className="container mx-auto px-6 mt-24">
@@ -36,7 +55,10 @@ const Contact = () => {
             </div>
           </div>
 
-          <form className="bg-gray-600 dark:bg-gray-300 shadow-lg rounded-lg p-6 space-y-4">
+          <form
+            className="bg-gray-600 dark:bg-gray-300 shadow-lg rounded-lg p-6 space-y-4 "
+            onSubmit={submitForm}
+          >
             <div>
               <label
                 htmlFor="name"
@@ -45,6 +67,7 @@ const Contact = () => {
                 Full Name
               </label>
               <input
+                ref={nameRef}
                 type="text"
                 id="name"
                 placeholder="Enter your full name"
@@ -59,6 +82,7 @@ const Contact = () => {
                 Email Address
               </label>
               <input
+                ref={emailRef}
                 type="email"
                 id="email"
                 placeholder="Enter your email"
@@ -73,6 +97,7 @@ const Contact = () => {
                 Message
               </label>
               <textarea
+                ref={messageRef}
                 id="message"
                 rows="4"
                 placeholder="Write your message"
