@@ -65,7 +65,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Footer Bottom Section */}
         <div className="mt-8 text-center text-gray-500">
           <p>
             &copy; {new Date().getFullYear()} Sha-Shank. All rights reserved.
