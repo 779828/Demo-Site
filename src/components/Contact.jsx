@@ -17,7 +17,7 @@ const Contact = () => {
                 Home Address
               </h3>
               <p className="text-gray-700 dark:text-gray-300">
-                Chandrapur, Maharashtra, India
+                Mumbai, Maharashtra, India
               </p>
             </div>
             <div>
