@@ -4,7 +4,7 @@ const Home = () => {
       <div className="container mx-auto flex flex-col-reverse lg:flex-col items-center px-6 lg:px-12">
         <div className="w-full lg:w-1/2 text-center lg:text-left">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-gray-300 leading-tight mb-6 mt-12">
-            Welcome to{" "}
+            Welcome to
             <span className="text-blue-900 dark:text-gray-100">My Project</span>
           </h1>
           <p className="text-gray-700 text-lg mb-6 dark:text-gray-300">

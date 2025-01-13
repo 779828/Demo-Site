@@ -11,12 +11,18 @@ const Hero = () => {
           using the open AI chat app tailored for you.
         </p>
         <div className="pt-4 md:w-full flex justify-center space-x-4">
-          <button className="uppercase bg-gray-800 text-white transition duration-300 rounded-xl px-4 py-2 hover:bg-gray-600 dark:bg-gray-300 dark:text-black hover:dark:bg-gray-200">
+          <a
+            href="/home"
+            className="uppercase bg-gray-800 text-white transition duration-300 rounded-xl px-4 py-2 hover:bg-gray-600 dark:bg-gray-300 dark:text-black hover:dark:bg-gray-200"
+          >
             Get Started
-          </button>
-          <button className="uppercase bg-transparent border-2 border-gray-800 text-gray-800 transition duration-300 rounded-xl px-4 py-2 hover:bg-gray-800 hover:text-white dark:border-gray-300 dark:text-gray-300 dark:hover:bg-gray-300 dark:hover:text-black">
+          </a>
+          <a
+            href="#learn-more"
+            className="uppercase bg-transparent border-2 border-gray-800 text-gray-800 transition duration-300 rounded-xl px-4 py-2 hover:bg-gray-800 hover:text-white dark:border-gray-300 dark:text-gray-300 dark:hover:bg-gray-300 dark:hover:text-black"
+          >
             Learn More
-          </button>
+          </a>
         </div>
       </div>
       <div className="mt-10 flex flex-wrap justify-center items-center">
