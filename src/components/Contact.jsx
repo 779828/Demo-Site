@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addSubmission } from "../features/formData/dataSlice";
+import axios from "axios";
 
 const Contact = () => {
   const data = useSelector((state) => state.user?.data);
@@ -9,7 +10,7 @@ const Contact = () => {
   const emailRef = useRef(null);
   const messageRef = useRef(null);
 
-  const submitForm = (e) => {
+  const submitForm = async (e) => {
     e.preventDefault();
     const name = nameRef.current.value;
     const email = emailRef.current.value;
@@ -19,10 +20,30 @@ const Contact = () => {
 
     dispatch(addSubmission(formData));
 
-    nameRef.current.value = "";
-    emailRef.current.value = "";
-    messageRef.current.value = "";
+    // Send the data to the backend (MongoDB)
+    try {
+      const response = await axios.post(
+        "https://demo-siteapi-production.up.railway.app/api/contact",
+        {
+          name,
+          email,
+          message,
+        }
+      );
+
+      console.log("Server Response:", response.data);
+      alert("Form submitted successfully!");
+
+      nameRef.current.value = "";
+      emailRef.current.value = "";
+      messageRef.current.value = "";
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Failed to submit the form");
+    }
   };
+
+  localStorage.removeItem("formData");
 
   return (
     <section className="bg-gray-300 py-12 dark:bg-gray-800">
