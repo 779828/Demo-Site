@@ -22,7 +22,7 @@ const Home = () => {
               Get Started
             </a>
             <a
-              href="#about"
+              href="/about"
               className="px-6 py-3 border border-black hover:text-gray-100 hover:bg-gray-800 dark:border-white dark:text-gray-100 font-semibold rounded-lg dark:hover:text-gray-800 dark:hover:bg-gray-100 transition"
             >
               Learn More

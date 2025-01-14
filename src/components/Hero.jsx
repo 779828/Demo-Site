@@ -18,10 +18,10 @@ const Hero = () => {
             Get Started
           </a>
           <a
-            href="#learn-more"
+            href="/contact"
             className="uppercase bg-transparent border-2 border-gray-800 text-gray-800 transition duration-300 rounded-xl px-4 py-2 hover:bg-gray-800 hover:text-white dark:border-gray-300 dark:text-gray-300 dark:hover:bg-gray-300 dark:hover:text-black"
           >
-            Learn More
+            Contact Us
           </a>
         </div>
       </div>
