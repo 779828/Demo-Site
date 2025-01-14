@@ -43,7 +43,7 @@ const Contact = () => {
     }
   };
 
-  localStorage.removeItem("formData");
+  // localStorage.removeItem("formData");
 
   return (
     <section className="bg-gray-300 py-12 dark:bg-gray-800">
