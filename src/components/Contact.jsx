@@ -1,8 +1,9 @@
 import { useRef } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addSubmission } from "../features/formData/dataSlice";
 
 const Contact = () => {
+  const data = useSelector((state) => state.user?.data);
   const dispatch = useDispatch();
   const nameRef = useRef(null);
   const emailRef = useRef(null);
@@ -14,9 +15,9 @@ const Contact = () => {
     const email = emailRef.current.value;
     const message = messageRef.current.value;
 
-    dispatch(addSubmission({ name, email, message }));
+    const formData = { name, email, message };
 
-    console.log("Form Data:", { name, email, message });
+    dispatch(addSubmission(formData));
 
     nameRef.current.value = "";
     emailRef.current.value = "";
