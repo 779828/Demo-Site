@@ -4,7 +4,9 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-between gap-y-8">
           <div className="w-full md:w-1/3">
-            <h2 className="text-2xl font-bold text-white mb-3">Sha-Shank</h2>
+            <h2 className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent mb-3">
+              Sha-Shank
+            </h2>
             <p className="text-gray-400">
               Your Trusted Source for Quality Products! Delivering quality and
               excellence since 2020.
