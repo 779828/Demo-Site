@@ -22,7 +22,7 @@ const Contact = () => {
 
     // Send the data to the backend (MongoDB)
     try {
-      const response = await axios.post("https://demo-site-api.vercel.app/", {
+      const response = await axios.post("https://demo-site-api.vercel.app", {
         name,
         email,
         message,
