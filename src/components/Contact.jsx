@@ -22,14 +22,11 @@ const Contact = () => {
 
     // Send the data to the backend (MongoDB)
     try {
-      const response = await axios.post(
-        "https://demo-siteapi-production.up.railway.app/api/contact",
-        {
-          name,
-          email,
-          message,
-        }
-      );
+      const response = await axios.post("https://demo-site-api.vercel.app/", {
+        name,
+        email,
+        message,
+      });
 
       console.log("Server Response:", response.data);
       alert("Form submitted successfully!");
