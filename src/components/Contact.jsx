@@ -1,6 +1,7 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addSubmission } from "../features/formData/dataSlice";
+import FileBase from "react-file-base64";
 import axios from "axios";
 
 const Contact = () => {
@@ -9,30 +10,37 @@ const Contact = () => {
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const messageRef = useRef(null);
+  const [selectedFile, setSelectedFile] = useState("");
 
   const submitForm = async (e) => {
     e.preventDefault();
+
     const name = nameRef.current.value;
     const email = emailRef.current.value;
     const message = messageRef.current.value;
 
-    const formData = { name, email, message };
+    if (!name || !email || !message || !selectedFile) {
+      alert("All fields are required.");
+      return;
+    }
+
+    const formData = { name, email, message, selectedFile };
 
     dispatch(addSubmission(formData));
 
-    // Send the data to the backend (MongoDB)
     try {
-      // Send data to the backend server using axios
+      // Send the data to the backend (MongoDB)
       const response = await axios.post("https://demo-site-api.vercel.app/", {
         name,
         email,
         message,
+        selectedFile,
       });
 
       console.log("Server Response:", response.data);
 
       // Send an email using fetch
-      const response1 = await fetch(
+      const emailResponse = await fetch(
         "https://demo-site-api.vercel.app/api/send-email",
         {
           method: "POST",
@@ -41,13 +49,14 @@ const Contact = () => {
         }
       );
 
-      if (response1.ok) {
+      if (emailResponse.ok) {
         alert("Email sent successfully!");
 
         // Clear the form inputs
         nameRef.current.value = "";
         emailRef.current.value = "";
         messageRef.current.value = "";
+        setSelectedFile(null);
       } else {
         alert("Failed to send email. Please try again later.");
       }
@@ -149,6 +158,32 @@ const Contact = () => {
                 className="w-full mt-1 px-4 py-2 border border-gray-300 dark:border-gray-800 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
                 required
               ></textarea>
+            </div>
+            <div>
+              <label
+                htmlFor="file"
+                className="block text-gray-100 dark:text-gray-800 font-medium"
+              >
+                Resume
+              </label>
+              <FileBase
+                type="file"
+                multiple={false}
+                onDone={({ base64 }) => {
+                  if (
+                    !base64.startsWith("data:application/pdf") &&
+                    !base64.startsWith("data:application/msword") &&
+                    !base64.startsWith(
+                      "data:application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                    )
+                  ) {
+                    alert("Please upload a valid PDF or DOC/DOCX file.");
+                    return;
+                  }
+                  setSelectedFile(base64);
+                }}
+                className="w-full mt-1 px-4 py-2 border border-gray-300 dark:border-gray-800 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              />
             </div>
             <button
               type="submit"
