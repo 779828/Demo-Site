@@ -23,7 +23,11 @@ const Contact = () => {
     // Send the data to the backend (MongoDB)
     try {
       // Send data to the backend server using axios
-      const response = await axios.post("http://localhost:5000/", formData);
+      const response = await axios.post("http://localhost:5000/", {
+        name,
+        email,
+        message,
+      });
 
       console.log("Server Response:", response.data);
 
