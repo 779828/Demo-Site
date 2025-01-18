@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addSubmission } from "../features/formData/dataSlice";
-// import axios from "axios";
+import axios from "axios";
 
 const Contact = () => {
   const data = useSelector((state) => state.user?.data);
@@ -21,38 +21,23 @@ const Contact = () => {
     dispatch(addSubmission(formData));
 
     // Send the data to the backend (MongoDB)
-    //   try {
-    //     const response = await axios.post("https://demo-site-api.vercel.app", {
-    //       name,
-    //       email,
-    //       message,
-    //     });
-
-    //     console.log("Server Response:", response.data);
-    //     alert("Form submitted successfully!");
-
-    //     nameRef.current.value = "";
-    //     emailRef.current.value = "";
-    //     messageRef.current.value = "";
-    //   } catch (error) {
-    //     console.error("Error submitting form:", error);
-    //     alert("Failed to submit the form");
-    //   }
-    // };
-
     try {
-      const response = await fetch(
-        "https://demo-site-api.vercel.app/api/send-email",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        }
-      );
+      // Send data to the backend server using axios
+      const response = await axios.post("http://localhost:5000/", formData);
 
-      if (response.ok) {
+      console.log("Server Response:", response.data);
+
+      // Send an email using fetch
+      const response1 = await fetch("http://localhost:5000/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response1.ok) {
         alert("Email sent successfully!");
 
+        // Clear the form inputs
         nameRef.current.value = "";
         emailRef.current.value = "";
         messageRef.current.value = "";
@@ -60,11 +45,13 @@ const Contact = () => {
         alert("Failed to send email. Please try again later.");
       }
     } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Failed to submit the form");
+
       console.error("Error sending email:", error);
       alert("An error occurred. Please try again.");
     }
   };
-
   // localStorage.removeItem("formData");
 
   return (
