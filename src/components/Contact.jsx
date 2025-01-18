@@ -79,9 +79,28 @@ const Contact = () => {
       "data:application/vnd.openxmlformats-officedocument.wordprocessingml.document",
     ];
 
+    // Extract file type and base64 data
+    const fileType = base64.split(",")[0];
+    const base64String = base64.split(",")[1];
+
     // Check if the uploaded file matches any valid file types
     if (!validFileTypes.some((type) => base64.startsWith(type))) {
       alert("Please upload a valid JPG, PNG, PDF, or DOC/DOCX file.");
+      return;
+    }
+
+    // Calculate file size in KB
+    const fileSizeInKB = (base64String.length * 3) / 4 / 1024; // Approximation
+
+    // Set file size limit (e.g., 5 MB = 5120 KB)
+    const maxSizeInKB = 5120; // Adjust the size limit as needed
+
+    if (fileSizeInKB > maxSizeInKB) {
+      alert(
+        `File size exceeds the ${
+          maxSizeInKB / 1024
+        } MB limit. Please upload a smaller file.`
+      );
       return;
     }
 
@@ -183,7 +202,7 @@ const Contact = () => {
                 htmlFor="file"
                 className="block text-gray-100 dark:text-gray-800 font-medium"
               >
-                Resume Below 100KB
+                Resume Below 5MB
               </label>
               <FileBase
                 type="file"
