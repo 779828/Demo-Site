@@ -30,7 +30,7 @@ const Contact = () => {
 
     try {
       // Send the data to the backend (MongoDB)
-      const response = await axios.post("https://demo-site-api.vercel.app/", {
+      const response = await axios.post("http://localhost:5000/", {
         name,
         email,
         message,
@@ -41,7 +41,7 @@ const Contact = () => {
 
       // Send an email using fetch
       const emailResponse = await fetch(
-        "https://demo-site-api.vercel.app/api/send-email",
+        "http://localhost:5000/api/send-email",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -69,6 +69,25 @@ const Contact = () => {
     }
   };
   // localStorage.removeItem("formData");
+
+  const handleFileUpload = ({ base64 }) => {
+    const validFileTypes = [
+      "data:image/jpeg",
+      "data:image/png",
+      "data:application/pdf",
+      "data:application/msword",
+      "data:application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    ];
+
+    // Check if the uploaded file matches any valid file types
+    if (!validFileTypes.some((type) => base64.startsWith(type))) {
+      alert("Please upload a valid JPG, PNG, PDF, or DOC/DOCX file.");
+      return;
+    }
+
+    // If valid, set the file
+    setSelectedFile(base64);
+  };
 
   return (
     <section className="bg-gray-300 py-12 dark:bg-gray-800">
@@ -169,19 +188,7 @@ const Contact = () => {
               <FileBase
                 type="file"
                 multiple={false}
-                onDone={({ base64 }) => {
-                  if (
-                    !base64.startsWith("data:application/pdf") &&
-                    !base64.startsWith("data:application/msword") &&
-                    !base64.startsWith(
-                      "data:application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                    )
-                  ) {
-                    alert("Please upload a valid PDF or DOC/DOCX file.");
-                    return;
-                  }
-                  setSelectedFile(base64);
-                }}
+                onDone={handleFileUpload}
                 className="w-full mt-1 px-4 py-2 border border-gray-300 dark:border-gray-800 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
               />
             </div>
