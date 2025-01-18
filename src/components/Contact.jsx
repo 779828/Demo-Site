@@ -30,7 +30,7 @@ const Contact = () => {
 
     try {
       // Send the data to the backend (MongoDB)
-      const response = await axios.post("http://localhost:5000/", {
+      const response = await axios.post("https://demo-site-api.vercel.app/", {
         name,
         email,
         message,
@@ -41,7 +41,7 @@ const Contact = () => {
 
       // Send an email using fetch
       const emailResponse = await fetch(
-        "http://localhost:5000/api/send-email",
+        "https://demo-site-api.vercel.app/api/send-email",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
