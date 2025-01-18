@@ -183,7 +183,7 @@ const Contact = () => {
                 htmlFor="file"
                 className="block text-gray-100 dark:text-gray-800 font-medium"
               >
-                Resume
+                Resume Below 100KB
               </label>
               <FileBase
                 type="file"
