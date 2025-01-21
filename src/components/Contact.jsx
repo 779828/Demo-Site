@@ -89,11 +89,9 @@ const Contact = () => {
       return;
     }
 
-    // Calculate file size in KB
-    const fileSizeInKB = (base64String.length * 3) / 4 / 1024; // Approximation
+    const fileSizeInKB = (base64String.length * 3) / 4 / 1024;
 
-    // Set file size limit (e.g., 5 MB = 5120 KB)
-    const maxSizeInKB = 5120; // Adjust the size limit as needed
+    const maxSizeInKB = 5120;
 
     if (fileSizeInKB > maxSizeInKB) {
       alert(
@@ -104,7 +102,6 @@ const Contact = () => {
       return;
     }
 
-    // If valid, set the file
     setSelectedFile(base64);
   };
 
