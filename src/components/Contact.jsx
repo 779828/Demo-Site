@@ -39,7 +39,6 @@ const Contact = () => {
 
       console.log("Server Response:", response.data);
 
-      // Send an email using fetch
       const emailResponse = await fetch(
         "https://demo-site-api.vercel.app/api/send-email",
         {
@@ -52,7 +51,6 @@ const Contact = () => {
       if (emailResponse.ok) {
         alert("Email sent successfully!");
 
-        // Clear the form inputs
         nameRef.current.value = "";
         emailRef.current.value = "";
         messageRef.current.value = "";
