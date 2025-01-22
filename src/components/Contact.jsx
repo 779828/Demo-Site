@@ -26,7 +26,7 @@ const Contact = () => {
 
     const formData = { name, email, message, selectedFile };
 
-    dispatch(addSubmission(formData));
+    dispatch(addSubmission({ name, email, message }));
 
     try {
       // Send the data to the backend (MongoDB)
