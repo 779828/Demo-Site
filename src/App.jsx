@@ -5,12 +5,14 @@ import Home from "./components/Home";
 import Main from "./components/Main";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/ReactToastify.css";
 
 function App() {
   return (
     <div className="bg-gray-300 dark:bg-gray-800 scrollbar-none overflow-y-scroll">
       <Header />
-
+      <ToastContainer />
       <Routes>
         <Route path="/" element={<Navigate to="/main" />} />
         <Route path="/home" element={<Home />} />

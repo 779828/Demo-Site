@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addSubmission } from "../features/formData/dataSlice";
 import FileBase from "react-file-base64";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const Contact = () => {
   const data = useSelector((state) => state.user?.data);
@@ -20,7 +21,7 @@ const Contact = () => {
     const message = messageRef.current.value;
 
     if (!name || !email || !message || !selectedFile) {
-      alert("All fields are required.");
+      toast.error("All fields are required.");
       return;
     }
 
@@ -49,21 +50,18 @@ const Contact = () => {
       );
 
       if (emailResponse.ok) {
-        alert("Email sent successfully!");
+        toast.success("Email sent successfully!");
 
         nameRef.current.value = "";
         emailRef.current.value = "";
         messageRef.current.value = "";
         setSelectedFile(null);
       } else {
-        alert("Failed to send email. Please try again later.");
+        toast.error("Failed to send email. Please try again later.");
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("Failed to submit the form");
-
-      console.error("Error sending email:", error);
-      alert("An error occurred. Please try again.");
+      toast.error("Failed to submit the form");
     }
   };
   // localStorage.removeItem("formData");
