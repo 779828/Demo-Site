@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const About = () => {
   return (
     <div className="px-6 py-8 mt-16">
@@ -26,12 +28,12 @@ const About = () => {
               to create impactful experiences for our clients and their
               customers.
             </p>
-            <a
-              href="/home"
+            <Link
+              to="/home"
               className="inline-block px-6 py-3 bg-gray-800 text-white rounded-xl hover:bg-gray-700 transition duration-300 dark:bg-gray-300 dark:text-black dark:hover:bg-gray-100 uppercase"
             >
               Learn More
-            </a>
+            </Link>
           </div>
         </div>
       </section>

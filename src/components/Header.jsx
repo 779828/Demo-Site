@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -52,34 +53,34 @@ const Header = () => {
       }`}
     >
       <div className="text-xl font-bold dark:bg-gradient-to-r dark:from-purple-400 dark:via-pink-500 dark:to-red-500 dark:bg-clip-text dark:text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
-        <a href="/main" className="cursor-pointer">
+        <Link to="/main" className="cursor-pointer">
           Sha-Shank
-        </a>
+        </Link>
       </div>
       <ul className="flex items-center space-x-6">
         <li>
-          <a
-            href="/home"
+          <Link
+            to="/home"
             className="text-gray-800 dark:text-gray-100 hover:underline hidden md:block"
           >
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="/about"
+          <Link
+            to="/about"
             className="text-gray-800 dark:text-gray-100 hover:underline hidden md:block"
           >
             About
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="text-gray-800 dark:text-gray-100 hover:underline hidden md:block"
           >
             Contact
-          </a>
+          </Link>
         </li>
         <li>
           <button
