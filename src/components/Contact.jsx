@@ -81,7 +81,7 @@ const Contact = () => {
 
     // Check if the uploaded file matches any valid file types
     if (!validFileTypes.some((type) => base64.startsWith(type))) {
-      alert("Please upload a valid JPG, PNG, PDF, or DOC/DOCX file.");
+      toast.error("Please upload a valid JPG, PNG, PDF, or DOC/DOCX file.");
       return;
     }
 
