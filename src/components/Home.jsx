@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Home = () => {
   return (
     <section className="bg-gray-300 dark:bg-gray-800 py-16">
@@ -15,18 +17,18 @@ const Home = () => {
             experience seamless and engaging.
           </p>
           <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-            <a
-              href="/main"
+            <Link
+              to="/main"
               className="px-6 py-3 bg-gray-800 text-white font-semibold rounded-lg shadow-md hover:bg-gray-600 transition dark:bg-gray-300 dark:text-gray-800 dark:hover:bg-gray-100"
             >
               Get Started
-            </a>
-            <a
-              href="/about"
+            </Link>
+            <Link
+              to="/about"
               className="px-6 py-3 border border-black hover:text-gray-100 hover:bg-gray-800 dark:border-white dark:text-gray-100 font-semibold rounded-lg dark:hover:text-gray-800 dark:hover:bg-gray-100 transition"
             >
               Learn More
-            </a>
+            </Link>
           </div>
         </div>
 

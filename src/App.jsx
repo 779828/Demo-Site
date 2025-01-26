@@ -7,6 +7,9 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/ReactToastify.css";
+import Login from "./components/Login";
+import PrivateRoute from "./utils/PrivateRoute";
+import PublicRoute from "./utils/PublicRoute";
 
 function App() {
   return (
@@ -14,13 +17,43 @@ function App() {
       <Header />
       <ToastContainer />
       <Routes>
-        <Route path="/" element={<Navigate to="/main" />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/main" element={<Main />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/" element={<Navigate to="/login" />} />
+
+        <Route
+          path="/login"
+          element={
+            <PublicRoute>
+              <Login />
+            </PublicRoute>
+          }
+        />
+
+        <Route
+          path="/home"
+          element={
+            <PrivateRoute>
+              <Home />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/main"
+          element={
+            <PrivateRoute>
+              <Main />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <PrivateRoute>
+              <About />
+            </PrivateRoute>
+          }
+        />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-
       <Footer />
     </div>
   );

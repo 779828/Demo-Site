@@ -1,5 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import userReducer from "../features/formData/dataSlice";
+import authReducer from "../features/formData/authSlice";
 
 const saveStateToLocalStorage = (state) => {
   try {
@@ -25,6 +26,7 @@ const preloadedState = loadStateFromLocalStorage();
 export const store = configureStore({
   reducer: {
     user: userReducer,
+    auth: authReducer,
   },
   preloadedState,
 });

@@ -102,7 +102,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="bg-gray-300 py-12 dark:bg-gray-800">
+    <section className="bg-gray-400 py-12 dark:bg-gray-800 min-h-screen">
       <div className="container mx-auto px-6 mt-16">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-6 dark:text-gray-100">
           Contact Us
