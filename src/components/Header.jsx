@@ -5,6 +5,7 @@ import { signOut } from "firebase/auth";
 import { clearUser } from "../features/formData/authSlice";
 import { auth } from "../utils/firebase";
 import { FiLogOut } from "react-icons/fi";
+import { FaUserPlus, FaSignInAlt, FaSignOutAlt } from "react-icons/fa";
 
 const Header = ({ isSignInForm, toggleSignInForm }) => {
   const dispatch = useDispatch();
@@ -88,7 +89,11 @@ const Header = ({ isSignInForm, toggleSignInForm }) => {
                     onClick={toggleSignInForm}
                     className="text-gray-800 dark:text-gray-100 hover:underline"
                   >
-                    {isSignInForm ? "Sign Up" : "Sign In"}
+                    {isSignInForm ? (
+                      <FaUserPlus size={25} />
+                    ) : (
+                      <FaSignInAlt size={25} />
+                    )}
                   </button>
                 </Link>
               </li>
@@ -138,7 +143,7 @@ const Header = ({ isSignInForm, toggleSignInForm }) => {
                   onClick={handleSignOut}
                   className="p-1 text-gray-800 bg-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-100"
                 >
-                  <FiLogOut size={20} />
+                  <FaSignOutAlt size={25} />
                 </button>
               </li>
             </>
