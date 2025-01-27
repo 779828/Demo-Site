@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 export const checkValidData = (name, email, password) => {
   const isNameValid = /^[A-Za-z\s]{2,}$/.test(name);
 
@@ -7,9 +9,9 @@ export const checkValidData = (name, email, password) => {
   const isPasswordValid =
     /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/.test(password);
 
-  if (!isNameValid) return "Name ID is not valid";
-  if (!isEmailValid) return "Email ID is not valid";
-  if (!isPasswordValid) return "Password is not valid";
+  if (!isNameValid) return toast.error("Name ID is not valid");
+  if (!isEmailValid) return toast.error("Email ID is not valid");
+  if (!isPasswordValid) return toast.error("Password is not valid");
 
   return null;
 };

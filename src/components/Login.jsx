@@ -142,9 +142,9 @@ const Login = () => {
             className="bg-gray-200 dark:bg-gray-700 p-4 my-4 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 dark:focus:ring-gray-400"
           />
 
-          {errorMessage && (
+          {/* {errorMessage && (
             <p className="text-red-500 text-sm text-center">{errorMessage}</p>
-          )}
+          )} */}
 
           <button
             type="submit"
