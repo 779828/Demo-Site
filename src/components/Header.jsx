@@ -6,6 +6,7 @@ import { clearUser } from "../features/formData/authSlice";
 import { auth } from "../utils/firebase";
 import { FiLogOut } from "react-icons/fi";
 import { FaUserPlus, FaSignInAlt, FaSignOutAlt } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const Header = ({ isSignInForm, toggleSignInForm }) => {
   const dispatch = useDispatch();
@@ -48,11 +49,11 @@ const Header = ({ isSignInForm, toggleSignInForm }) => {
     signOut(auth)
       .then(() => {
         dispatch(clearUser());
-        console.log("User signed out");
+        toast.success("User signed out");
         navigate("/login");
       })
       .catch((error) => {
-        console.error("Error signing out:", error.message);
+        toast.error("Error signing out:", error.message);
       });
   };
 

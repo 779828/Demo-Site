@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="bg-gray-300 dark:bg-gray-800 scrollbar-none overflow-y-scroll">
       <Header />
-      <ToastContainer />
+      <ToastContainer position="top-right" />
       <Routes>
         <Route path="/" element={<Navigate to="/login" />} />
 

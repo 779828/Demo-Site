@@ -10,6 +10,7 @@ import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { setUser } from "../features/formData/authSlice";
 import Header from "./Header";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -54,6 +55,8 @@ const Login = () => {
                 })
               );
 
+              toast.success("User Signed Up");
+
               navigate("/main");
             })
             .catch((error) => {
@@ -65,7 +68,7 @@ const Login = () => {
           const errorCode = error.code;
           const errorMessage = error.message;
           setErrorMessage(`${errorCode} - ${errorMessage}`);
-          console.error(errorMessage);
+          toast.error(errorMessage);
         });
     } else {
       // Sign In Logic
@@ -84,13 +87,14 @@ const Login = () => {
               displayName: user.displayName || "",
             })
           );
+          toast.success("User Signed In");
           navigate("/main");
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
           setErrorMessage(errorCode + "-" + errorMessage);
-          console.error(errorMessage);
+          toast.error(errorMessage);
         });
     }
   };
