@@ -104,7 +104,7 @@ const Header = ({ isSignInForm, toggleSignInForm }) => {
           <li>
             <Link
               to="/contact"
-              className="text-gray-800 dark:text-gray-100 hover:underline hidden md:block"
+              className="text-gray-800 dark:text-gray-100 hover:underline"
             >
               Contact
             </Link>
