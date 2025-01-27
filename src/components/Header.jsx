@@ -81,25 +81,6 @@ const Header = ({ isSignInForm, toggleSignInForm }) => {
           </Link>
         </div>
         <ul className="flex items-center space-x-6">
-          {!user && (
-            <>
-              <li>
-                <Link to="/login">
-                  <button
-                    onClick={toggleSignInForm}
-                    className="text-gray-800 dark:text-gray-100 hover:underline"
-                  >
-                    {isSignInForm ? (
-                      <FaUserPlus size={25} />
-                    ) : (
-                      <FaSignInAlt size={25} />
-                    )}
-                  </button>
-                </Link>
-              </li>
-            </>
-          )}
-
           {user && (
             <>
               <li>
@@ -136,6 +117,24 @@ const Header = ({ isSignInForm, toggleSignInForm }) => {
               {darkMode ? "☀️" : "🌙"}
             </button>
           </li>
+          {!user && (
+            <>
+              <li>
+                <Link to="/login">
+                  <button
+                    onClick={toggleSignInForm}
+                    className="text-gray-800 dark:text-gray-100 hover:underline m-2"
+                  >
+                    {isSignInForm ? (
+                      <FaUserPlus size={25} />
+                    ) : (
+                      <FaSignInAlt size={25} />
+                    )}
+                  </button>
+                </Link>
+              </li>
+            </>
+          )}
           {user && (
             <>
               <li>

@@ -144,7 +144,7 @@ const Login = () => {
 
           <button
             type="submit"
-            className="p-4 my-6 bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600 rounded-lg w-full transition duration-300"
+            className="p-4 my-6 bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600 rounded-lg w-full"
           >
             {isSignInForm ? "Sign In" : "Sign Up"}
           </button>
