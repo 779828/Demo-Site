@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import image from "../assets/Shashank4.jpeg";
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -8,10 +9,10 @@ const Carousel = () => {
   const containerRef = useRef(null);
 
   const images = [
+    image,
     "https://t3.ftcdn.net/jpg/05/59/87/12/360_F_559871209_pbXlOVArUal3mk6Ce60JuP13kmuIRCth.jpg",
     "https://t4.ftcdn.net/jpg/05/79/95/01/360_F_579950180_R9xGY9hpwJl5P6D3cs2FfavNK7sM3sfG.jpg",
     "https://ennisco.com/wp-content/uploads/2023/12/CEO-square.jpg",
-    "https://img.stablecog.com/insecure/1920w/aHR0cHM6Ly9iLnN0YWJsZWNvZy5jb20vZGYzMTNkM2QtZTA2MS00ZjcwLWEyMjgtNTU1OGFhODY4OTczLmpwZWc.webp",
   ];
   const handleStartDrag = (e) => {
     setIsDragging(true);
