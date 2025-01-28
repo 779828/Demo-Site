@@ -10,10 +10,9 @@ const Carousel = () => {
   const images = [
     "https://t3.ftcdn.net/jpg/05/59/87/12/360_F_559871209_pbXlOVArUal3mk6Ce60JuP13kmuIRCth.jpg",
     "https://t4.ftcdn.net/jpg/05/79/95/01/360_F_579950180_R9xGY9hpwJl5P6D3cs2FfavNK7sM3sfG.jpg",
-    "https://media.istockphoto.com/id/1414699113/photo/small-robot-assistant-work-with-graphic-display.jpg?s=612x612&w=0&k=20&c=gGfba4h97L1tFjVWkPTiZUlfNHtkrf0fHhsmkY4S5Ng=",
-    "https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/31121f14-67c5-4a45-a352-aa75b5b48f85/2232a1a4-8ff3-4e0a-8373-5f909f1a621b.png",
+    "https://ennisco.com/wp-content/uploads/2023/12/CEO-square.jpg",
+    "https://img.stablecog.com/insecure/1920w/aHR0cHM6Ly9iLnN0YWJsZWNvZy5jb20vZGYzMTNkM2QtZTA2MS00ZjcwLWEyMjgtNTU1OGFhODY4OTczLmpwZWc.webp",
   ];
-
   const handleStartDrag = (e) => {
     setIsDragging(true);
     setStartX(e.clientX || e.touches[0].clientX);

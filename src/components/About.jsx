@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import image from "../assets/Shashank3.jpeg";
 
 const About = () => {
   return (
@@ -7,7 +8,7 @@ const About = () => {
         <div className="container mx-auto flex flex-col items-center md:flex-row md:items-start">
           <div className="mb-8 md:mb-0 md:w-1/2 flex justify-center">
             <img
-              src="https://img.stablecog.com/insecure/1920w/aHR0cHM6Ly9iLnN0YWJsZWNvZy5jb20vZGYzMTNkM2QtZTA2MS00ZjcwLWEyMjgtNTU1OGFhODY4OTczLmpwZWc.webp"
+              src={image}
               alt="About Us"
               className="w-full max-w-sm rounded-lg shadow-lg object-cover md:w-3/4"
             />

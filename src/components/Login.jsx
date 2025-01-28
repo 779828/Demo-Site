@@ -68,7 +68,6 @@ const Login = () => {
           const errorCode = error.code;
           const errorMessage = error.message;
           setErrorMessage(`${errorCode} - ${errorMessage}`);
-
           toast.error(errorMessage);
         });
     } else {
@@ -88,16 +87,13 @@ const Login = () => {
               displayName: user.displayName || "",
             })
           );
-
           toast.success("User Signed In");
-
           navigate("/main");
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
           setErrorMessage(errorCode + "-" + errorMessage);
-
           toast.error(errorMessage);
         });
     }
