@@ -7,7 +7,8 @@ import { auth } from "../utils/firebase";
 import { FiLogOut } from "react-icons/fi";
 import { FaUserPlus, FaSignInAlt, FaSignOutAlt } from "react-icons/fa";
 import { toast } from "react-toastify";
-import logo from "../assets/Logo.png";
+import logo1 from "../assets/Logo1.png";
+import logo2 from "../assets/Logo2.png";
 
 const Header = ({ isSignInForm, toggleSignInForm }) => {
   const dispatch = useDispatch();
@@ -79,7 +80,16 @@ const Header = ({ isSignInForm, toggleSignInForm }) => {
       >
         <div className="text-xl font-bold dark:bg-gradient-to-r dark:from-purple-400 dark:via-pink-500 dark:to-red-500 dark:bg-clip-text dark:text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
           <Link to={user ? "/main" : "/login"} className="cursor-pointer">
-            <img src={logo} alt="Logo" className="ml-4 w-20 h-auto" />
+            <img
+              src={logo1}
+              alt="Logo"
+              className="ml-4 w-20 h-auto dark:hidden"
+            />
+            <img
+              src={logo2}
+              alt="Logo"
+              className="ml-4 w-20 h-auto hidden dark:block"
+            />
           </Link>
         </div>
         <ul className="flex items-center space-x-6">
