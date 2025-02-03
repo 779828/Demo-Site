@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <div className="flex items-center flex-col md:h-[30em] dark:bg-gray-800 bg-inherit">
-      <div className="mt-10 md:mt-20 px-4 md:px-12 py-4">
+      <div className="mt-20 md:mt-20 px-4 md:px-12 py-4">
         <h1 className="py-6 text-3xl md:text-5xl font-bold text-gray-800 flex justify-center text-center dark:text-gray-300">
           Explore the Possibilities <br /> of AI Chatting with Brainwave
         </h1>
