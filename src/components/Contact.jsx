@@ -8,10 +8,12 @@ import { toast } from "react-toastify";
 const Contact = () => {
   const data = useSelector((state) => state.user?.data);
   const dispatch = useDispatch();
+
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const messageRef = useRef(null);
   const [selectedFile, setSelectedFile] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const submitForm = async (e) => {
     e.preventDefault();
@@ -24,6 +26,8 @@ const Contact = () => {
       toast.error("All fields are required.");
       return;
     }
+
+    setIsSubmitting(true); // Disable button while submitting
 
     const formData = { name, email, message, selectedFile };
 
@@ -52,6 +56,7 @@ const Contact = () => {
       if (emailResponse.ok) {
         toast.success("Email sent successfully!");
 
+        // Clear form fields
         nameRef.current.value = "";
         emailRef.current.value = "";
         messageRef.current.value = "";
@@ -62,9 +67,10 @@ const Contact = () => {
     } catch (error) {
       console.error("Error submitting form:", error);
       toast.error("Failed to submit the form");
+    } finally {
+      setIsSubmitting(false); // Enable button after submission
     }
   };
-  // localStorage.removeItem("formData");
 
   const handleFileUpload = ({ base64 }) => {
     const validFileTypes = [
@@ -75,22 +81,19 @@ const Contact = () => {
       "data:application/vnd.openxmlformats-officedocument.wordprocessingml.document",
     ];
 
-    // Extract file type and base64 data
     const fileType = base64.split(",")[0];
     const base64String = base64.split(",")[1];
 
-    // Check if the uploaded file matches any valid file types
     if (!validFileTypes.some((type) => base64.startsWith(type))) {
       toast.error("Please upload a valid JPG, PNG, PDF, or DOC/DOCX file.");
       return;
     }
 
     const fileSizeInKB = (base64String.length * 3) / 4 / 1024;
-
     const maxSizeInKB = 5120;
 
     if (fileSizeInKB > maxSizeInKB) {
-      alert(
+      toast.error(
         `File size exceeds the ${
           maxSizeInKB / 1024
         } MB limit. Please upload a smaller file.`
@@ -206,9 +209,14 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="w-full bg-gray-300 dark:text-gray-100 text-gray-700 font-bold py-2 px-4 rounded-md hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-900 active:bg-gray-200 dark:active:bg-gray-700 transition"
+              disabled={!selectedFile || isSubmitting}
+              className={`w-full font-bold py-2 px-4 rounded-md transition ${
+                !selectedFile || isSubmitting
+                  ? "bg-gray-400 text-gray-700 cursor-not-allowed"
+                  : "bg-gray-300 dark:text-gray-100 text-gray-700 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-900 active:bg-gray-200 dark:active:bg-gray-700"
+              }`}
             >
-              Send Message
+              {isSubmitting ? "Submitting..." : "Send Message"}
             </button>
           </form>
         </div>
