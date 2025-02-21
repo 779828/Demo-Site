@@ -94,7 +94,7 @@ const Login = () => {
           const errorCode = error.code;
           const errorMessage = error.message;
           setErrorMessage(errorCode + "-" + errorMessage);
-          toast.error("Please Sign Up First");
+          toast.error("Hey! you are new to Platform. Please Sign Up First");
         });
     }
   };
