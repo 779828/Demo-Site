@@ -44,6 +44,7 @@ const Hero = () => {
         <div className="w-full p-4 md:w-52 text-center">
           <img
             src={img2}
+            alt="Productivity"
             className="w-full h-auto rounded-lg shadow-lg object-cover"
           />
           <p className="text-sm md:text-base mt-2 text-gray-600 dark:text-gray-400">
