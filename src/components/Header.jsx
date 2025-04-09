@@ -79,7 +79,7 @@ const Header = ({ isSignInForm, toggleSignInForm }) => {
         }`}
       >
         <div className="text-xl font-bold dark:bg-gradient-to-r dark:from-purple-400 dark:via-pink-500 dark:to-red-500 dark:bg-clip-text dark:text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
-          <Link to={user ? "/main" : "/login"} className="cursor-pointer">
+          <Link to={"/main"} className="cursor-pointer">
             <img
               src={logoWhite}
               alt="Logo"
@@ -113,14 +113,14 @@ const Header = ({ isSignInForm, toggleSignInForm }) => {
               </li>
             </>
           )}
-          <li>
+          {/* <li>
             <Link
               to="/contact"
               className="text-gray-800 dark:text-gray-100 hover:underline"
             >
               Contact
             </Link>
-          </li>
+          </li> */}
           <li>
             <button
               onClick={toggleDarkMode}

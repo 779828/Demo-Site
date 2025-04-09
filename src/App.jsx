@@ -17,7 +17,7 @@ function App() {
       <Header />
       <ToastContainer position="top-right" />
       <Routes>
-        <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/" element={<Navigate to="/main" />} />
 
         <Route
           path="/login"
@@ -36,14 +36,7 @@ function App() {
             </PrivateRoute>
           }
         />
-        <Route
-          path="/main"
-          element={
-            <PrivateRoute>
-              <Main />
-            </PrivateRoute>
-          }
-        />
+        <Route path="/main" element={<Main />} />
         <Route
           path="/about"
           element={

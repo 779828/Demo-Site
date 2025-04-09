@@ -108,7 +108,7 @@ const Contact = () => {
     <section className="bg-gray-400 py-12 dark:bg-gray-800 min-h-screen">
       <div className="container mx-auto px-6 mt-16">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-6 dark:text-gray-100">
-          Contact Us
+          Get In Touch
         </h2>
         <p className="text-center text-gray-700 mb-12 dark:text-gray-300">
           Have questions or need help? Reach out to us, and we’ll get back to

@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import img1 from "../assets/AI-powered solutions.jpg";
+import img2 from "../assets/Productivity boosters.jpg";
+import img3 from "../assets/Secure & reliable.jpg";
 
 const Hero = () => {
   return (
@@ -30,7 +33,7 @@ const Hero = () => {
       <div className="mt-10 flex flex-wrap justify-center items-center">
         <div className="w-full p-4 md:w-52 text-center">
           <img
-            src="https://www.guava.blue/wp-content/uploads/2021/09/iStock-1307309168-1170x658.jpg"
+            src={img1}
             alt="AI powered"
             className="w-full h-auto rounded-lg shadow-lg object-cover"
           />
@@ -40,8 +43,7 @@ const Hero = () => {
         </div>
         <div className="w-full p-4 md:w-52 text-center">
           <img
-            src="https://media.licdn.com/dms/image/C5112AQF_gWyWqQC8OQ/article-cover_image-shrink_720_1280/0/1572754452905?e=2147483647&v=beta&t=_OpNlNf-AVwqlM6ITWY3CMUX8iVckqAvQ1dTcWoEqiY"
-            alt="Productivity booster"
+            src={img2}
             className="w-full h-auto rounded-lg shadow-lg object-cover"
           />
           <p className="text-sm md:text-base mt-2 text-gray-600 dark:text-gray-400">
@@ -50,7 +52,7 @@ const Hero = () => {
         </div>
         <div className="w-full p-4 md:w-52 text-center">
           <img
-            src="https://blog.lifeqisystem.com/hubfs/Security%20Reliability%20Flexibility%20-%2001.png"
+            src={img3}
             alt="Secure and reliable"
             className="w-full h-auto rounded-lg shadow-lg object-cover"
           />
