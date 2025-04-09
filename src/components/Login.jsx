@@ -110,7 +110,7 @@ const Login = () => {
         isSignInForm={isSignInForm}
         toggleSignInForm={() => setIsSignInForm((prev) => !prev)}
       />
-      <div className="min-h-screen flex items-center justify-center bg-gray-400 dark:bg-gray-800 transition-colors duration-200">
+      <div className="min-h-screen flex items-center justify-center bg-gray-300 dark:bg-gray-800 transition-colors duration-200">
         <form
           className="w-full max-w-md p-8 bg-gray-600 dark:bg-gray-900 text-gray-800 dark:text-white rounded-2xl shadow-lg transition-colors duration-300"
           onSubmit={handleButtonClick}
