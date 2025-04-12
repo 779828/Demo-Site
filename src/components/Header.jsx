@@ -124,7 +124,7 @@ const Header = ({ isSignInForm, toggleSignInForm }) => {
           <li>
             <button
               onClick={toggleDarkMode}
-              className="p-2 text-gray-800 bg-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-100"
+              className="p-1 text-gray-800 bg-gray-300/30 rounded-md dark:bg-gray-800/30 dark:text-gray-100"
             >
               {darkMode ? "☀️" : "🌙"}
             </button>
